@@ -1,8 +1,8 @@
 const ParkingLot = require("./ParkingLot");
 
 class CarParkingLot extends ParkingLot {
-  constructor(capacity, chargesPerHour) {
-    super(capacity, chargesPerHour);
+  constructor(capacityPerFloor, noOfFloors, chargesPerHour) {
+    super(capacityPerFloor, noOfFloors, chargesPerHour);
   }
 }
 

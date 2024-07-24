@@ -5,7 +5,7 @@ function main() {
   console.log(
     "------------------------------START------------------------------"
   );
-  let carParkingLot = new CarParkingLot(2, 40);
+  let carParkingLot = new CarParkingLot(2, 1, 40);
 
   let car1 = new Car("1", "Innova", "red");
   let car2 = new Car("2", "Swift", "blue");
