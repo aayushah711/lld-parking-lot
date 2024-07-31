@@ -1,8 +1,11 @@
-class Car {
+const Vehicle = require("./Vehicle");
+
+class Car extends Vehicle {
   constructor(numberPlate, name, color) {
-    this.numberPlate = numberPlate;
+    super(numberPlate);
     this.name = name;
     this.color = color;
+    this.type = "car";
   }
 }
 

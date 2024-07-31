@@ -1,5 +1,5 @@
-const CarParkingLot = require("./CarParkingLot");
-const Car = require("./Car");
+const CarParkingLot = require("./Models/ParkingLot/CarParkingLot");
+const Car = require("./Models/Vehicles/Car");
 
 function main() {
   console.log(

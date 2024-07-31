@@ -11,6 +11,39 @@ This project implements a low level design system for a smart parking lot. The s
 - Parking Fee Calculation: Calculates parking fees based on duration and vehicle type.
 - Real-Time Availability Update: Updates and broadcasts the availability of parking spots in real-time.
 
+## Data model
+
+ParkingLot
+capacity: number,
+parkingSpace: map,
+availability: number,
+chargesPerHour: number,
+parkingSpots: array
+
+Vehicle
+numberPlate: string
+
+Motorcycle
+numberPlate: string,
+name: string,
+color: string,
+type: string
+
+Car
+numberPlate: string,
+name: string,
+color: string,
+type: string
+
+Bus
+numberPlate: string,
+type: string
+
+Parking Spot
+id: number,
+floorNumber: number,
+spotNumber: number
+
 ## Tech Stack
 
 Backend: Node.js

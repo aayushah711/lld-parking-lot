@@ -14,21 +14,26 @@ class ParkingLot {
   }
 
   addVehicle(vehicle, inTime) {
+    const isVehicleTypeValid = this.checkVehicleType(vehicle);
+    if (!isVehicleTypeValid) {
+      return;
+    }
+
     if (this.availability === 0) {
       console.log(`No space in parking lot for ${vehicle.name}`);
-    } else {
-      const parkingSpot = this.findAvailableSpot();
-      this.availability--;
-
-      this.parkingSpace.set(vehicle, { inTime, parkingSpot });
-      console.log(
-        `${vehicle.name} enters parkingSpot`,
-        parkingSpot,
-        `at ${inTime}PM`
-      );
-
-      this.getAvailability();
+      return;
     }
+    const parkingSpot = this.findAvailableSpot();
+    this.availability--;
+
+    this.parkingSpace.set(vehicle, { inTime, parkingSpot });
+    console.log(
+      `${vehicle.name} enters parkingSpot`,
+      parkingSpot,
+      `at ${inTime}PM`
+    );
+
+    this.getAvailability();
   }
 
   findAvailableSpot() {
@@ -77,6 +82,10 @@ class ParkingLot {
         : `Currrently ${this.availability || "no"} spots are available`;
     console.log(message);
     return this.availability;
+  }
+
+  checkVehicleType(vehicle) {
+    return true;
   }
 }
 
